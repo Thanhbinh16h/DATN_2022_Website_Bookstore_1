@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="vi" class="h-100" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+   <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Register</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" type="text/css">
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="/assets/css/font-awesome.min.css" type="text/css">
+
+    <!-- Custom css - Các file css do chúng ta tự viết -->
+    <link rel="stylesheet" href="/assets/css/app.css" type="text/css">
+	<link rel="stylesheet" href="/assets/css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="/assets/css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="/assets/images/fevicon.png" type="/assets/image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="/assets/css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+
+</head>
+
+<body >
+	<div class="loader_bg">
+         <div class="loader"><img src="/assets/images/loading.gif" alt="#" /></div>
+    </div>
+    <!-- end loader -->
+    <!-- header -->
+    <div th:replace="user/fragments/header :: head"></div>
+    <main role="main">
+        <!-- Block content - Đục lỗ trên giao diện bố cục chung, đặt tên là `content` -->
+        <form name="frmdangky" id="frmdangky" method="post" action="#">
+            <div class="container mt-4">
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div class="card mx-4">
+                            <div class="card-body p-4">
+                                <h1>Đăng ký</h1>
+                                <p class="text-muted">Tạo tài khoản</p>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-user"></i>
+                                        </span>
+                                    </div>
+                                    <input class="form-control" type="text" placeholder="Tên tải khoản"
+                                        name="kh_tendangnhap">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-user"></i>
+                                        </span>
+                                    </div>
+                                    <input class="form-control" type="password" placeholder="Mật khẩu"
+                                        name="kh_matkhau">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-user"></i>
+                                        </span>
+                                    </div>
+                                    <input class="form-control" type="text" placeholder="Họ tên" name="kh_ten">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-user"></i>
+                                        </span>
+                                    </div>
+                                    <select name="kh_gioitinh" class="form-control">
+                                        <option value="0">Nam</option>
+                                        <option value="1">Nữ</option>
+                                    </select>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-user"></i>
+                                        </span>
+                                    </div>
+                                    <input class="form-control" type="text" placeholder="Địa chỉ" name="kh_diachi">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-user"></i>
+                                        </span>
+                                    </div>
+                                    <input class="form-control" type="text" placeholder="Điện thoại"
+                                        name="kh_dienthoai">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-user"></i>
+                                        </span>
+                                    </div>
+                                    <input class="form-control" type="email" placeholder="Email" name="kh_email">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-user"></i>
+                                        </span>
+                                    </div>
+                                    <input class="form-control" type="text" placeholder="Ngày sinh" name="kh_ngaysinh">
+                                    <input class="form-control" type="text" placeholder="Tháng sinh"
+                                        name="kh_thangsinh">
+                                    <input class="form-control" type="text" placeholder="Năm sinh" name="kh_namsinh">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-user"></i>
+                                        </span>
+                                    </div>
+                                    <input class="form-control" type="text" placeholder="CMND" name="kh_cmnd">
+                                </div>
+                                <button class="btn btn-block btn-success" name="btnDangKy">Tạo tài khoản</button>
+                            </div>
+                            <div class="card-footer p-4">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <center>Nếu bạn đã có Tài khoản, xin mời Đăng nhập</center>
+                                        <a class="btn btn-primary form-control"
+                                            href="/login">Đăng nhập</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <!-- End block content -->
+    </main>
+
+    <!-- footer -->
+    
+        <div class="container">
+            <p class="float-right">
+                <a href="/admin/index">Về đầu trang</a>
+            </p>
+        </div>
+        <br>
+     <div th:replace="user/fragments/footer :: foot"></div>
+    <!-- end footer -->
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="/assets/js/jquery.min.js"></script>
+      <script src="/assets/js/popper.min.js"></script>
+      <script src="/assets/js/bootstrap.bundle.min.js"></script>
+      <script src="/assets/js/jquery-3.0.0.min.js"></script>
+      <!-- sidebar -->
+      <script src="/assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="/assets/js/custom.js"></script>
+
+    <!-- Custom script - Các file js do mình tự viết -->
+
+</body>
+
+</html>
